@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { ExternalLink, X } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 export default function Certifications() {
-  const [open, setOpen] = useState(false);
-
   return (
     <section
       id="certifications"
@@ -20,61 +17,41 @@ export default function Certifications() {
           skills and real-world project experience.
         </p>
 
-        {/* Certificate Card */}
-        <div
-          onClick={() => setOpen(true)}
-          className="group cursor-pointer max-w-3xl mx-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden hover:border-cyan-400/40 transition"
-        >
-          {/* Image */}
-          <div className="overflow-hidden">
-            <img
-              src="/images/guvi-iitm-certificate.png"
-              alt="GUVI IIT-M Pravartak Full Stack Certificate"
-              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          {/* Info */}
-          <div className="p-8 text-left">
-            <h3 className="text-xl font-semibold text-white mb-2">
-              IIT-M Pravartak Certified Full Stack Development (With AI Tools)
-            </h3>
-
-            <p className="text-gray-400 text-sm mb-3">
-              Issued by GUVI (An IIT-M Incubated Company)
-            </p>
-
-            <p className="text-gray-500 text-sm">
-              March 2025 – September 2025
-            </p>
-
-            <div className="mt-4 inline-flex items-center gap-2 text-cyan-400 text-sm">
-              Click to view certificate
-              <ExternalLink className="h-4 w-4" />
+        {/* Certification Card */}
+        <div className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-10 hover:border-cyan-400/40 transition">
+          {/* Icon */}
+          <div className="flex justify-center mb-6">
+            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-400/10 border border-cyan-400/30">
+              <Award className="h-8 w-8 text-cyan-400" />
             </div>
           </div>
+
+          {/* Content */}
+          <h3 className="text-2xl font-semibold text-white mb-3">
+            IIT-M Pravarttak Certified Full Stack Development (With AI Tools)
+          </h3>
+
+          <p className="text-gray-400 mb-2">
+            Issued by <span className="text-white">GUVI</span> (An IIT-M
+            Incubated Company)
+          </p>
+
+          <p className="text-gray-500 mb-6">
+            March 2025 – September 2025
+          </p>
+
+          {/* Action */}
+          <a
+            href="/images/guvi-iitm-certificate.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition"
+          >
+            Click to view certificate
+            <ExternalLink className="h-4 w-4" />
+          </a>
         </div>
       </div>
-
-      {/* Modal */}
-      {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4">
-          <div className="relative max-w-5xl w-full bg-[#020617] rounded-2xl overflow-hidden">
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 text-gray-300 hover:text-white transition"
-            >
-              <X className="h-6 w-6" />
-            </button>
-
-            <img
-              src="/images/guvi-iitm-certificate.png"
-              alt="Full Stack Certificate Full View"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </div>
-      )}
     </section>
   );
 }
