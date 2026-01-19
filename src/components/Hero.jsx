@@ -102,7 +102,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="mailto:christudivakar@gmail.com"
+              href="mailto:chriswakar@gmail.com"
               className="p-3 rounded-xl bg-white/5 hover:bg-sky-500/20 transition"
             >
               <Mail className="text-white" />
