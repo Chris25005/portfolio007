@@ -1,4 +1,5 @@
-import Header from "./components/Header"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
 import About from "./components/About"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
@@ -7,13 +8,18 @@ import Contact from "./components/Contact"
 
 export default function App() {
   return (
-    <div className="max-w-6xl mx-auto px-6 space-y-24">
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Contact />
-    </div>
+    <>
+      <Navbar />
+
+      {/* Global top padding for fixed navbar */}
+      <main className="pt-16 max-w-7xl mx-auto px-6">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+    </>
   )
 }

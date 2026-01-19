@@ -9,7 +9,7 @@ export default function Header() {
       className="min-h-screen flex flex-col justify-center text-center"
     >
       <h1 className="text-5xl font-bold mb-4">
-        Christu <span className="text-accent">Divakar</span>
+        Christu <span className="text-accent">Divakar</span> 
       </h1>
       <p className="text-slate-400 text-lg mb-6">
         Full Stack Developer • MERN • Cloud • UI Engineer
