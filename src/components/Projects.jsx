@@ -13,8 +13,8 @@ export default function Projects() {
             Projects
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-400">
-            Full-stack development projects built with real-world authentication,
-            APIs, and cloud deployment.
+            Full-stack MERN applications built with real-world authentication,
+            analytics, and cloud deployment.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export default function Projects() {
           <ProjectCard
             image="/images/recipe-platform.png"
             title="Recipe Sharing Platform"
-            description="A full-stack MERN application that enables users to create, browse, update, and manage recipes securely. Implements JWT authentication, protected routes, REST APIs, and MongoDB Atlas for persistent data storage with full cloud deployment."
+            description="A full-stack MERN application that allows users to create, manage, and explore recipes securely. Implements JWT authentication, protected routes, REST APIs, and MongoDB Atlas for persistent storage with cloud deployment."
             tech={[
               "React",
               "Node.js",
@@ -42,22 +42,24 @@ export default function Projects() {
 
           {/* ================= Project 2 ================= */}
           <ProjectCard
-            image="/images/password-reset.png"
-            title="Password Reset Flow"
-            description="A secure authentication system implementing user registration, login, and password reset via email. Uses JWT tokens, encrypted passwords, email-based reset links, and environment-based configuration for production readiness."
+            image="/images/expense-tracker.png"
+            title="Expense Tracker (MERN Stack)"
+            description="A comprehensive financial management system that helps users track income and expenses with category-wise analysis, interactive charts, and detailed reports. Features JWT authentication, real-time dashboard stats, and secure user-specific data handling."
             tech={[
+              "React",
               "Node.js",
               "Express",
-              "JWT",
               "MongoDB",
-              "Email Integration",
+              "JWT",
+              "Recharts",
+              "Bootstrap",
               "Render",
               "Netlify",
             ]}
-            frontend="https://passwordresetflow007.netlify.app/login"
-            backend="https://passwordresetflowbe.onrender.com/"
-            feRepo="https://github.com/Chris25005/PasswordResetFlow-FE"
-            beRepo="https://github.com/Chris25005/PasswordResetFlow"
+            frontend="https://superb-pony-da8703.netlify.app/login"
+            backend="https://expensetrackerbe-rkgb.onrender.com"
+            feRepo="https://github.com/Chris25005/ExpenseTrackerFrontend"
+            beRepo="https://github.com/Chris25005/ExpenseTrackerBE"
           />
 
           {/* ================= Project 3 ================= */}
@@ -85,7 +87,7 @@ export default function Projects() {
   );
 }
 
-/* ================= Reusable Card ================= */
+/* ================= Reusable Project Card ================= */
 
 function ProjectCard({
   image,
@@ -110,9 +112,13 @@ function ProjectCard({
 
       {/* Content */}
       <div className="p-10">
-        <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
+        <h3 className="text-2xl font-semibold text-white mb-4">
+          {title}
+        </h3>
 
-        <p className="text-gray-400 mb-6 leading-relaxed">{description}</p>
+        <p className="text-gray-400 mb-6 leading-relaxed">
+          {description}
+        </p>
 
         <div className="flex flex-wrap gap-2 mb-8">
           {tech.map((item) => (
@@ -133,7 +139,8 @@ function ProjectCard({
             className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white hover:border-cyan-400/40 transition"
           >
             <Globe className="h-4 w-4 text-cyan-400" />
-            Live Frontend <ExternalLink className="h-4 w-4" />
+            Live Frontend
+            <ExternalLink className="h-4 w-4" />
           </a>
 
           <a
@@ -143,7 +150,8 @@ function ProjectCard({
             className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white hover:border-cyan-400/40 transition"
           >
             <Server className="h-4 w-4 text-cyan-400" />
-            Live Backend <ExternalLink className="h-4 w-4" />
+            Live Backend
+            <ExternalLink className="h-4 w-4" />
           </a>
 
           <a
